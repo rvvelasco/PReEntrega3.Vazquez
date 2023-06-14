@@ -1,0 +1,12 @@
+@import "../vars";
+
+
+@mixin hovers{
+    h2{
+        text-align: center;
+        color: $color-principal;
+        margin-top: 50%;
+        display: inline-flex;
+        font-weight: bold;
+    }
+}

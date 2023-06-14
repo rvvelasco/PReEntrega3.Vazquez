@@ -1,0 +1,231 @@
+   @import "mquerys";
+   @import "vars";
+   @import "../scss/utilidades/listas";
+   @import "../scss/utilidades/mixin";
+   @import "../scss/utilidades/extend";
+   
+   /*RESET*/
+
+
+   * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: nth($lista-colores, 1 );
+    font-family: 'Roboto Mono', monospace;
+}
+                /*HEADER*/
+
+ header nav div div ul li a{
+    color: nth($lista-colores, 1 )!important;
+    font-size: 18px;
+    font-weight: 800 !important;
+}
+header nav div div ul li a:hover{
+    text-decoration: underline !important;
+    
+}
+                /*BODY*/
+
+body{
+    background-image: url('../img/fondo3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+                /*MAIN*/
+
+main h1{
+    margin-top: 50px;
+    font-size: 55px;
+    text-align: center;
+}
+
+main div{
+    margin-top: 30px;
+    text-align: center;
+}
+
+main .nosotros{
+    font-size: 29px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+main .caja{
+    justify-content: center;
+}
+
+main div div form div input{
+    color: $color-secundario;
+}
+
+main div div form .formulario{
+    display: flex;
+    justify-content: center;
+}
+
+
+            /*FOOTER*/
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    text-align: center;
+
+}
+            /*TABLAS*/
+table, tr{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid $color-principal;
+    font-size: 25px;
+    margin-top: 20px;
+    padding:1px;
+}
+
+
+            /* IMAGENES*/
+
+#icono{
+    color: $color-principal !important;
+}
+
+.redes{
+    position: fixed;
+    line-height: 30px;
+    bottom: 25px;
+    right: 30px;
+}
+
+
+#logo{
+    height: 50px;
+}
+
+/* Caruosel*/ 
+.carousel-inner img {
+    width: 60%;
+    height: 60%;
+  }
+
+
+
+                /*Clases.html*/
+
+                .caja-clases {
+                    justify-content: center;
+                    display: grid;
+                    grid-template-columns: 450px 450px 450px 450px;
+                    grid-template-rows: 450px 450px 450px 450px;
+                    gap: 10px; }
+                
+                /*contenidos*/
+                
+                .contenido-uno{
+                    background-image:url(../img/clase1.jpg);
+                    @extend %contenidos;
+                }
+                
+                .contenido-dos{
+                    background-image:url(../img/clase2.jpg); 
+                    @extend %contenidos;
+                }
+                .contenido-tres{
+                    background-image:url(../img/clase3.jpeg);
+                    @extend %contenidos;
+                }
+                .contenido-cuatro{
+                    background-image:url(../img/clase4.jpeg);
+                    @extend %contenidos;
+                }
+                .contenido-cinco{
+                    background-image:url(../img/violin.jpg);
+                    @extend %contenidos;
+                }
+                .contenido-seis{
+                    background-image:url(../img/piano.jpg);
+                    @extend %contenidos;
+                }
+                .contenido-siete{
+                    background-image:url(../img/acordion.jpg);
+                    @extend %contenidos;
+                }
+                .contenido-ocho{
+                    background-image:url(../img/canto.jpg);
+                    @extend %contenidos;
+                }
+                
+                /*hovers*/
+                
+                .contenido-uno:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/clase1.jpg");
+                    @include hovers
+                }
+                
+                .contenido-dos:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/clase2.jpg");
+                    @include hovers
+                }
+                .contenido-tres:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/clase3.jpeg");
+                    @include hovers
+                }
+                
+                .contenido-cuatro:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/clase4.jpeg");
+                    @include hovers
+                }
+                
+                .contenido-cinco:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/violin.jpg");
+                    @include hovers
+                }
+                
+                .contenido-seis:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/piano.jpg");
+                    @include hovers
+                }
+                
+                .contenido-siete:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/acordion.jpg");
+                    @include hovers
+                }
+                
+                .contenido-ocho:hover{
+                    --opacidad-negro: 0.8;
+                    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/canto.jpg");
+                    @include hovers
+                }
+
+/* MEDIA QUERYS CLASES*/
+
+                @media screen and (max-width:1849px){
+                    .caja-clases {
+                        justify-content: center;
+                        display: grid;
+                        grid-template-columns: 450px 450px;
+                        grid-template-rows: 450px 450px;
+                        gap: 10px; }
+                }
+
+                @media screen and (max-width:991px){
+                    .caja-clases {
+                        justify-content: center;
+                        display: grid;
+                        grid-template-columns: 450px;
+                        grid-template-rows: 450px;
+                        gap: 10px; }
+                }
